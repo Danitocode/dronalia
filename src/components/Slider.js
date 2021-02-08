@@ -38,12 +38,12 @@ class Slider extends React.Component {
     return (
 		<div>
         <div
-          class="jumbotron jumbotron-image color-grey-light"
+          className="jumbotron jumbotron-image color-grey-light"
           style={{ backgroundImage: `url('${currentImage}')` }}
         >
-          <div class="mask rgba-black-strong d-flex align-items-center h-100">
-            <div class="container text-center white-text py-5">
-              <h1 class="mb-6">The best drone shop</h1>
+          <div className="mask rgba-black-strong d-flex align-items-center h-100">
+            <div className="container text-center white-text py-5">
+              <h1 className="mb-6">The best drone shop</h1>
             </div>
           </div>
         </div>

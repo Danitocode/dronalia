@@ -1,119 +1,84 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const nav = {
-  border: "solid",
-  width: "2px",
-  color: "#ccc",
-};
+
 
 class Header extends React.Component {
   render() {
     return (
-
-        <nav
-          class="navbar navbar-expand-lg navbar-light bg-light py-md-2"
-          style={{ nav }}>
-          <div>
-            <a class="navbar-brand" href="#">
-            <div  style={{float:"center"}}>
-              Dronalia
-            </div>
-              <img
-                src="../images/dronelogo.ico"
-                width="75"
-                height="75"
-                class="d-inline-block align-top"
-                alt=""
-              />
-            </a>
-
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div>
+          <div className="navbar-brand" to="/">
+            <div style={{ float: "center" }}>Dronalia</div>
+            <img
+              src="../images/dronelogo.ico"
+              width="75"
+              height="75"
+              className="d-inline-block align-top"
+              alt=""
+            />
           </div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        </div>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">
-                  Home <span class="sr-only">(current)</span>
-                </a>
-              </li>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/">
+                <p>Home</p>
+              </Link>
+            </li>
+            <li className="nav-item">
+            <Link className="nav-link" to="/Main">
+                <p>Carrito</p>
+              </Link>
 
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Ofertas
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">
-                    Ofertas series
-                  </a>
-                  <a class="dropdown-item" href="#">
-                    Ofertas películas
-                  </a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">
-                    Último minuto
-                  </a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Registro
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  aria-disabled="true"
-                >
-                  Tus pedidos
-                </a>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input
-                class="form-control mr-sm-2"
-                id="txt-search"
-                type="search"
-                placeholder="nombre serie o película"
-                aria-label="buscar"
-              />
-              <button
-                class="btn btn-outline-success my-2 my-sm-0"
-                id="btn-search"
-                type="submit"
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
               >
-                Buscar
-              </button>
-            </form>
-          </div>
-        </nav>
-
-
-
+                Dropdown
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a className="dropdown-item" href="#">
+                  Action
+                </a>
+                <a className="dropdown-item" href="#">
+                  Another action
+                </a>
+                <div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">
+                  Something else here
+                </a>
+              </div>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link disabled" href="#">
+                Disabled
+              </a>
+            </li>
+          </ul>
+          <form className="form-inline my-2 my-lg-0">
+            <input
+              className="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
     );
   }
 }
 
 export default Header;
-
-

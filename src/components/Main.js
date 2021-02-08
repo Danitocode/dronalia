@@ -1,16 +1,20 @@
 import React from "react";
+import Footer from "./Footer";
 
-const navbar = {
-    border: 'solid',
-    width : '2px',
-    color:  '#ccc'
-  }
 
-const Main = () => {
-    return (	
-	<div class="container">
 
-</div>
-);
-};
+function Main() {
+  return (<>
+      <div className="container">
+        holooooo
+      <Footer />
+    </div>
+    
+  </>
+
+
+  );
+}
+
 export default Main;
+
