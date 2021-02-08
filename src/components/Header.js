@@ -43,18 +43,22 @@ class Header extends React.Component {
       <header>
         <nav
           class="navbar navbar-expand-lg navbar-light bg-light py-md-2"
-          style={{ nav }}
-        >
-          <a class="navbar-brand" href="#">
-            <img
-              src="./img/landing-page/film-icon.png"
-              width="32"
-              height="32"
-              class="d-inline-block align-top"
-              alt=""
-            />
-            Postermania
-          </a>
+          style={{ nav }}>
+          <div>
+            <a class="navbar-brand" href="#">
+            <div  style={{float:"center"}}>
+              Dronalia
+            </div>
+              <img
+                src="../images/dronelogo.ico"
+                width="75"
+                height="75"
+                class="d-inline-block align-top"
+                alt=""
+              />
+            </a>
+
+          </div>
           <button
             class="navbar-toggler"
             type="button"

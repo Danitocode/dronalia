@@ -7,11 +7,8 @@ const navbar = {
   }
 
 const Main = () => {
-    return (	<div class="container">
-
-
-
-    
+    return (	
+	<div class="container">
 
 </div>
 );
