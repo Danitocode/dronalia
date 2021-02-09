@@ -1,55 +1,61 @@
 import React, { Component } from "react";
+import UserService from '../services/UserService';
 
 class PopulateAmateurDrone extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-      isLoaded: false,
-    };
+
+      constructor(props){
+          super(props)
+          this.state = {
+              users:[]
+          }
+      }
+  
+      componentDidMount(){
+          UserService.getUsers().then((response) => {
+              this.setState({users: response.data})
+              console.log(response.data);
+          });
+  
+      }
+  
+  render(){
+      return(
+          <div>
+              <h1 className="text-center">Users List</h1>
+              <table className="table table-striped">
+                  <thead>
+                      <tr>
+                          <td>Id</td>
+                          <td>name</td>
+                          <td>axis</td>
+                          <td>colour</td>
+                          <td>price</td>
+                          <td>size</td>
+  
+                      </tr>
+                  </thead>
+                  <tbody>
+                      {
+                          this.state.users.map(
+                              user =>
+                              <tr key = {user.id}>
+                                  <td>{user.id}</td>
+                                  <td>{user.name}</td>
+                                  <td>{user.axis}</td>
+                                  <td>{user.colour}</td>
+                                  <td>{user.price}</td>
+                                  <td>{user.size}</td>
+  
+                              </tr>
+                          )
+                      }
+                  </tbody>
+              </table>
+          </div>
+      )
   }
-
-  componentDidMount() {
-    fetch("http://localhost:8080/api/drones")
-      .then((res) => res.json())
-      .then((json) => {
-        this.setState({
-          isLoaded: true,
-          items: json,
-          
-        });
-        console.log(json);
-
-      });
+  
   }
-
-  render() {
-    var { isLoaded, items } = this.state;
-
-    if (!isLoaded) {
-      return <div>Loading...</div>;
-    } else {
-      return <div className="card-deck mb-3 text-center py-3">
-              {items.map(item => (
-
-                <div id="film" className="card mb-4 shadow-sm" style={{width: "14rem"}}>
-                <img src="#" className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title">{item.name}</h5>
-                    <p className="card-text"><span className="text-info">Eje:</span>{item.axis}</p>
-                    <p className="card-text"><span className="text-info">Medida</span>{item.size}</p>
-                    <p className="card-text"><span className="text-info bold">Color</span>{item.colour}</p>
-                    <p className="card-text price">{item.price}</p>
-                </div>
-                <div className="card-header">Stars</div>
-                <ul className="list-group list-group-flush">
-                </ul>
-
-                </div>
-              ))}
-      </div>;
-    }
-  }
-}
-
+  
+  
 export default PopulateAmateurDrone;

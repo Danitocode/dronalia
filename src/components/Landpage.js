@@ -13,77 +13,191 @@ function Landpage() {
         <header>
           <Slider />
         </header>
-        <nav>
-          <div className="nav nav-tabs" id="nav-tab" role="tablist">
-            <a
-              className="nav-link active"
-              id="nav-home-tab"
-              data-bs-toggle="tab"
-              href="#nav-home"
-              role="tab"
-              aria-controls="nav-home"
-              aria-selected="true"
-            >
-              Principiantes
-            </a>
-            <a
-              className="nav-link"
-              id="nav-profile-tab"
-              data-bs-toggle="tab"
-              href="#nav-profile"
-              role="tab"
-              aria-controls="nav-profile"
-              aria-selected="false"
-            >
-              Aficionados
-            </a>
-            <a
-              className="nav-link"
-              id="nav-contact-tab"
-              data-bs-toggle="tab"
-              href="#nav-contact"
-              role="tab"
-              aria-controls="nav-contact"
-              aria-selected="false"
-            >
-              Profesionales
-            </a>
-          </div>
-        </nav>
-        <div className="tab-content" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-home-tab">
-            <PopulateBeginerDrone
-              className="card-deck mb-3 text-center py-3"
-              id="nav-films"
-              role="tabpanel"
-              aria-labelledby="nav-home-tab"
-            />
-	    		</div>
+        <div>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+          </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"/>
 
-          <div class="tab-pane fade show active" id="nav-profile" role="tabpanel" aria-labelledby="nav-home-tab">
-            <PopulateAmateurDrone
-              className="card-deck mb-3 text-center py-3"
-              id="nav-films"
-              role="tabpanel"
-              aria-labelledby="nav-home-tab"
-            />
-	    		</div>
 
-          <div
-            className="tab-pane fade"
-            id="nav-contact"
-            role="tabpanel"
-            aria-labelledby="nav-contact-tab"
-          >
-            <PopulateProfesionalDrone
-              className="tab-pane fade show active"
-              id="nav-films"
-              role="tabpanel"
-              aria-labelledby="nav-home-tab"
-            />
+
+
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-xs-4">
+                <div class="card">
+                  <img src="..." class="card-img-top" alt="..."/>
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+            </div>
           </div>
+
         </div>
-
       </div>
     </>
   );
