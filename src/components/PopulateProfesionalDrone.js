@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class PopulateDrone extends Component {
+class PopulateProfesionalDrone extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -52,4 +52,4 @@ class PopulateDrone extends Component {
   }
 }
 
-export default PopulateDrone;
+export default PopulateProfesionalDrone;
