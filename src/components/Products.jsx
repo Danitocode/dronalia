@@ -49,12 +49,13 @@ export default function Products({ setCart, cart }) {
 
   return (
     <>
-      <h1>Products</h1>
-      Select a category
-      <select onChange={(e) => setCategory(e.target.value)}>
-        <option value={HOME_GARDEN}>{HOME_GARDEN}</option>
-        <option value={UTILITY}>{UTILITY}</option>
-      </select>
+    
+      <nav>
+            <div onClick={(e) => setCategory(e.target.value)} className="nav nav-tabs" id="nav-tab" role="tablist">
+              <option value={HOME_GARDEN} className="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Principiantes</option>
+              <option value={UTILITY} className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Aficionados</option>
+            </div>
+          </nav>
       <div className="products">
         {getProductsInCategory().map((product, idx) => (
           <div className="product" key={idx}>

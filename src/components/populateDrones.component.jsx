@@ -29,21 +29,21 @@ class PopulateDrones extends Component {
     if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
-      return <div className="card-deck mb-3 text-center py-3">
+      return <div className="card-deck mb-3 text-center py-3" > 
               {items.map(item => (
 
-              <div class="col-3">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="..."/>
-                <div class="card-body">
-                  <h5 class="card-title">{item.name}</h5>
-                  <p class="card-text">{item.axis}</p>
-                  <p class="card-text">{item.size}</p>
-                  <p class="card-text">{item.colour}</p>
-                  <p class="card-text">{item.price}</p>
-
+              <div class="col-md-3 col-lg-3 col-xs-3"  style={ { marginBottom: "25px"} }>
+                <div class="card">
+                  <img src="../images/.jpg" class="card-img-top" alt="drone" width="100" height="100"/>
+                  <div class="card-body">
+                    <h5 class="card-title">{item.name}</h5>
+                    <p class="card-text">Eje : {item.axis}</p>
+                    <p class="card-text">Medida : {item.size}</p>
+                    <p class="card-text">Color : {item.colour}</p>
+                    <p class="card-text">Precio : {item.price}€</p>
+                    <button type="button" class="btn btn-primary">Comprar</button>
+                  </div>
                 </div>
-              </div>
               </div>              
         ))}
       </div>;

@@ -28,9 +28,9 @@ export default function Cart({ cart, setCart }) {
 
   return (
     <>
-      <h1>Cart</h1>
+      <h1>Carrito</h1>
       {cart.length > 0 && (
-        <button onClick={clearCart}>Clear Cart</button>
+        <button class="btn btn-secondary"  onClick={clearCart}>Eliminar todo</button>
       )}
       <div className="products">
         {cart.map((product, idx) => (
@@ -47,14 +47,15 @@ export default function Cart({ cart, setCart }) {
               }
             />
             <img src={product.image} alt={product.name} />
-            <button onClick={() => removeFromCart(product)}>
-              Remove
+
+            <button class="btn btn-danger" onClick={() => removeFromCart(product)}>
+              Eliminar
             </button>
           </div>
         ))}
       </div>
 
-      <div>Total Cost: ${getTotalSum()}</div>
+      <div>Total : ${getTotalSum()}</div>
     </>
   );
 }

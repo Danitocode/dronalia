@@ -23,13 +23,13 @@ function Presentation() {
   return (
     <div className="App">
       <header>
-        <button onClick={() => navigateTo(PAGE_CART)}>
-          Go to Cart ({getCartTotal()})
-        </button>
+      <button onClick={() => navigateTo(PAGE_CART)} type="button" class="btn btn-primary">
+      Carrito ({getCartTotal()})
+      </button>
+      <button onClick={() => navigateTo(PAGE_PRODUCTS)} type="button" class="btn btn-secondary">
+        Productos disponibles
+      </button>
 
-        <button onClick={() => navigateTo(PAGE_PRODUCTS)}>
-          View Products
-        </button>
       </header>
       {page === PAGE_PRODUCTS && (
         <Products cart={cart} setCart={setCart} />

@@ -40,7 +40,7 @@ class AdminWarehouse extends Component {
           <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
             
 
-          <div className="row row-cols-3 row-cols-md-2 g-4">
+          <div className="row">
           {<PopulateDrones/>}
           </div>
 
