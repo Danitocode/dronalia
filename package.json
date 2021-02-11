@@ -1,20 +1,19 @@
 {
-  "name": "dronalia",
+  "name": "react-jwt-auth",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@popperjs/core": "^2.6.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "axios": "^0.21.1",
-    "bootstrap": "^4.6.0",
-    "jquery": "^3.5.1",
-    "react": "^16.13.1",
-    "react-bootstrap": "^1.4.3",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.0",
+    "react-validation": "^3.0.7",
+    "validator": "^12.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,8 +35,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "prop-types": "^15.7.2"
   }
 }
