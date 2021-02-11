@@ -30,51 +30,20 @@ class Home extends Component {
       <>
       <div className="container">
       {<Slider/>}
-          <nav>
-            <div className="nav nav-tabs" id="nav-tab" role="tablist">
-              <a className="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Principiantes</a>
-              <a className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Aficionados</a>
-              <a className="nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Profesionales</a>
-            </div>
-          </nav>
-        <div className="tab-content" id="nav-tabContent">
-          <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-            
+      <div class="jumbotron">
+        <h1 class="display-4">Bienvenidos a Dronalia</h1>
+        <p class="lead">El sitio más confiable de drones.</p>
+        <hr class="my-4"/>
+        <p>Revisa los drones disponibles</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Catálogo</a>
+      </div>
+
 
           <div className="row">
           {<PopulateDrones/>}
           </div>
 
 
-          </div>
-          <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-            
-
-
-          <div className="row row-cols-3 row-cols-md-2 g-4">
-
-          {/*<PopulateAmateurDrone/> */}
-
-
-          </div>
-
-
-
-          </div>
-          <div className="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-            
-
-
-          <div className="row row-cols-3 row-cols-md-2 g-4">
-          {/*<PopulateAmateurDrone/> */}
-
-
-          </div>
-
-
-
-          </div>
-        </div>
       </div>
     </>
     );

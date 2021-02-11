@@ -1,28 +1,7 @@
 import React, { Component } from "react";
-import PopulateDrones from "../components/populateDrones.component";
+import PopulateWarehouses from "../components/pupulateWarehouses.component";
 
 class AdminWarehouse extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-      isLoaded: false,
-    };
-  }
-
-  componentDidMount() {
-    fetch("http://localhost:8080/api/test/drones")
-      .then((res) => res.json())
-      .then((json) => {
-        this.setState({
-          isLoaded: true,
-          items: json,
-          
-        });
-        console.log(json);
-
-      });
-  }
 
   render() {
     return (
@@ -41,7 +20,7 @@ class AdminWarehouse extends Component {
             
 
           <div className="row">
-          {<PopulateDrones/>}
+          {<PopulateWarehouses/>}
           </div>
 
 
