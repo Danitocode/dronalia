@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import React, { Component } from "react";
 
 class PopulateDrones extends Component {
@@ -19,7 +20,7 @@ class PopulateDrones extends Component {
           
         });
         console.log(json);
-
+        return json;
       });
   }
 
@@ -32,16 +33,16 @@ class PopulateDrones extends Component {
       return <div className="card-deck mb-3 text-center py-3" > 
               {items.map(item => (
 
-              <div class="col-md-3 col-lg-3 col-xs-3"  style={ { marginBottom: "25px"} }>
-                <div class="card">
-                  <img src="../images/.jpg" class="card-img-top" alt="drone" width="100" height="100"/>
-                  <div class="card-body">
-                    <h5 class="card-title">{item.name}</h5>
-                    <p class="card-text">Eje : {item.axis}</p>
-                    <p class="card-text">Medida : {item.size}</p>
-                    <p class="card-text">Color : {item.colour}</p>
-                    <p class="card-text">Precio : {item.price}€</p>
-                    <button type="button" class="btn btn-primary">Comprar</button>
+              <div className="col-md-3 col-lg-3 col-xs-3"  style={ { marginBottom: "25px"} }>
+                <div className="card">
+                  <img src="../images/${item.img}.jpg" className="card-img-top" alt="drone" width="100" height="100"/>
+                  <div className="card-body">
+                    <h5 className="card-title">{item.name}</h5>
+                    <p className="card-text">Eje : {item.axis}</p>
+                    <p className="card-text">Medida : {item.size}</p>
+                    <p className="card-text">Color : {item.colour}</p>
+                    <p className="card-text">Precio : {item.price}€</p>
+                    <button type="button" className="btn btn-primary">Comprar</button>
                   </div>
                 </div>
               </div>              

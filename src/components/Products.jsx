@@ -1,10 +1,18 @@
 import { render } from '@testing-library/react';
 import React, { useState } from 'react';
+import PopulateDrones from '../components/populateDrones.component';
 
 const HOME_GARDEN = 'home and garden';
 const UTILITY = 'utility';
+const PROFESIONAL = 'profesional';
+
+
+
 
 export default function Products({ setCart, cart }) {
+
+
+  
   const [products] = useState([
     {
       category: UTILITY,
@@ -15,6 +23,13 @@ export default function Products({ setCart, cart }) {
     },
     {
       category: HOME_GARDEN,
+      name: 'Blanket',
+      cost: 19.99,
+      image:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpwdYDmUL_ZEqhLV7ZWRdQAU7DGcGaxtCt7SrTlL9umrQs2Un7rj9Nbb9Vq01RtEfA0eAVmdt-&usqp=CAc',
+    },
+    {
+      category: PROFESIONAL,
       name: 'Blanket',
       cost: 19.99,
       image:
@@ -54,6 +69,7 @@ export default function Products({ setCart, cart }) {
             <div onClick={(e) => setCategory(e.target.value)} className="nav nav-tabs" id="nav-tab" role="tablist">
               <option value={HOME_GARDEN} className="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Principiantes</option>
               <option value={UTILITY} className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Aficionados</option>
+              <option value={PROFESIONAL} className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profesionales</option>
             </div>
           </nav>
       <div className="products">

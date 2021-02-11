@@ -66,7 +66,7 @@ class Nav extends React.Component {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to="/">
-                <p>Home</p>
+                <p>Inicio</p>
               </Link>
             </li>
             {showAdminBoard && (
@@ -87,7 +87,7 @@ class Nav extends React.Component {
             </li>
             <li className="nav-item">
               <a href="/login" className="nav-link" onClick={this.logOut}>
-                LogOut
+                Salir
               </a>
             </li>
           </div>
@@ -95,13 +95,13 @@ class Nav extends React.Component {
           <div className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link to={"/login"} className="nav-link">
-                Login
+                Iniciar sesión
               </Link>
             </li>
 
             <li className="nav-item">
               <Link to={"/register"} className="nav-link">
-                Sign Up
+                Registrarse
               </Link>
             </li>
           </div>
@@ -111,11 +111,11 @@ class Nav extends React.Component {
             <input
               className="form-control me-2"
               type="search"
-              placeholder="Search"
+              placeholder="Buscar drone"
               aria-label="Search"
             />
             <button className="btn btn-outline-success" type="submit">
-              Search
+              Buscar
             </button>
           </form>
         </div>
