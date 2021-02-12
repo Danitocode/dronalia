@@ -30,12 +30,12 @@ class Home extends Component {
       <>
       <div className="container">
       {<Slider/>}
-      <div class="jumbotron">
-        <h1 class="display-4">Bienvenidos a Dronalia</h1>
-        <p class="lead">El sitio más confiable de drones.</p>
-        <hr class="my-4"/>
+      <div className="jumbotron">
+        <h1 className="display-4">Bienvenidos a Dronalia</h1>
+        <p className="lead">El sitio más confiable de drones.</p>
+        <hr className="my-4"/>
         <p>Revisa los drones disponibles</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Catálogo</a>
+        <a className="btn btn-primary btn-lg" href="#" role="button">Catálogo</a>
       </div>
 
 
