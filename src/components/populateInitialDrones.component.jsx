@@ -1,7 +1,8 @@
 import { render } from "@testing-library/react";
 import React, { Component } from "react";
+import { Switch, Route, Link } from "react-router-dom";
 
-class PopulateDrones extends Component {
+class PopulateInitialDrones extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -42,7 +43,9 @@ class PopulateDrones extends Component {
                     <p className="card-text">Medida : {item.size}</p>
                     <p className="card-text">Color : {item.colour}</p>
                     <p className="card-text">Precio : {item.price}€</p>
-                    <button type="button" className="btn btn-primary">Comprar</button>
+                    <Link to={"/catalog"} className="btn btn-primary btn-lg" >
+              Catálogo
+        </Link>
                   </div>
                 </div>
               </div>              
@@ -52,12 +55,4 @@ class PopulateDrones extends Component {
   }
 }
 
-export default PopulateDrones;
-
-
-
-
-
-
-
-
+export default PopulateInitialDrones;

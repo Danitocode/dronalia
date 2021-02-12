@@ -1,9 +1,7 @@
-import { render } from '@testing-library/react';
 import React, { useState } from 'react';
-import PopulateDrones from '../components/populateDrones.component';
 
-const HOME_GARDEN = 'home and garden';
-const UTILITY = 'utility';
+const BEGINNER = 'home and garden';
+const AMATEUR = 'utility';
 const PROFESIONAL = 'profesional';
 
 
@@ -15,25 +13,33 @@ export default function Products({ setCart, cart }) {
   
   const [products] = useState([
     {
-      category: UTILITY,
-      name: 'AA Battery',
-      cost: 2.99,
+      category: BEGINNER,
+      name: 'Dron Parrot Mambo Fly',
+      cost: 60,
       image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ5-QAul_NfAs-s0XW9M087xWyPOGWvbfYjmqSl0QXabZRSYoid47i7kISiAteyIh0YOci5mtQ&usqp=CAc',
+        '/images/drone5.jpg',
+        axis: 3,
+        colour: 'Blanco',
     },
     {
-      category: HOME_GARDEN,
-      name: 'Blanket',
-      cost: 19.99,
+      category: AMATEUR,
+      name: 'Parrot Anafi Drone ',
+      cost: 579,
       image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpwdYDmUL_ZEqhLV7ZWRdQAU7DGcGaxtCt7SrTlL9umrQs2Un7rj9Nbb9Vq01RtEfA0eAVmdt-&usqp=CAc',
+        '/images/drone6.jpg',
+        axis: 3,
+        colour: 'Negro',
+
     },
     {
       category: PROFESIONAL,
-      name: 'Blanket',
-      cost: 19.99,
+      name: 'Autel Robotic ',
+      cost: 1389,
       image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpwdYDmUL_ZEqhLV7ZWRdQAU7DGcGaxtCt7SrTlL9umrQs2Un7rj9Nbb9Vq01RtEfA0eAVmdt-&usqp=CAc',
+        '/images/drone7.jpg',
+        axis: 4,
+        colour: 'Rojo',
+
     },
   ]);
 
@@ -54,7 +60,7 @@ export default function Products({ setCart, cart }) {
     setCart(newCart);
   };
 
-  const [category, setCategory] = useState(HOME_GARDEN);
+  const [category, setCategory] = useState(BEGINNER);
 
   const getProductsInCategory = () => {
     return products.filter(
@@ -67,20 +73,30 @@ export default function Products({ setCart, cart }) {
     
       <nav>
             <div onClick={(e) => setCategory(e.target.value)} className="nav nav-tabs" id="nav-tab" role="tablist">
-              <option value={HOME_GARDEN} className="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Principiantes</option>
-              <option value={UTILITY} className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Aficionados</option>
+              <option value={BEGINNER} className="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Principiantes</option>
+              <option value={AMATEUR} className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Aficionados</option>
               <option value={PROFESIONAL} className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profesionales</option>
             </div>
           </nav>
       <div className="products">
         {getProductsInCategory().map((product, idx) => (
           <div className="product" key={idx}>
-            <h3>{product.name}</h3>
-            <h4>${product.cost}</h4>
-            <img src={product.image} alt={product.name} />
-            <button onClick={() => addToCart(product)}>
-              Add to Cart
-            </button>
+
+          <div className="col-md-3 col-lg-3 col-xs-3"  style={ { marginBottom: "25px"} }>
+          <div className="card">
+            <img src={product.image} className="card-img-top" alt={product.name} width="100" height="100"/>
+            <div className="card-body">
+              <h5 className="card-title">{product.name}</h5>
+              <p className="card-text">Eje : {product.axis}</p>
+              <p className="card-text">Medida : {product.size}</p>
+              <p className="card-text">Color : {product.colour}</p>
+              <p className="card-text">Precio : {product.price}€</p>
+              <button type="button" className="btn btn-primary" onClick={() => addToCart(product)}>Comprar</button>
+            </div>
+          </div>
+          </div>              
+
+
           </div>
         ))}
       </div>

@@ -80,8 +80,8 @@ class Nav extends React.Component {
             {currentUser ? (
           <div className="navbar-nav ml-auto">
             <li className="nav-item">
-              <Link to={"/Presentation"} className="nav-link">
-                Carrito
+              <Link to={"/catalog"} className="nav-link">
+                Catálogo
               </Link>
 
             </li>

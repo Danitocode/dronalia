@@ -22,13 +22,16 @@ function Presentation() {
 
   return (
     <div className="App">
-      <header>
-      <button onClick={() => navigateTo(PAGE_CART)} type="button" class="btn btn-primary">
-      Carrito ({getCartTotal()})
-      </button>
-      <button onClick={() => navigateTo(PAGE_PRODUCTS)} type="button" class="btn btn-secondary">
-        Productos disponibles
-      </button>
+      <header style={ { marginBottom: "25px"} }>
+        <div style={ { marginLeft: "25px"} }>
+        <button onClick={() => navigateTo(PAGE_CART)} type="button" class="btn btn-primary" style={ { marginRight: "25px"} }>
+          Carrito ({getCartTotal()})
+        </button>
+        <button onClick={() => navigateTo(PAGE_PRODUCTS)} type="button" class="btn btn-secondary">
+          Productos disponibles
+        </button>
+
+        </div>
 
       </header>
       {page === PAGE_PRODUCTS && (
