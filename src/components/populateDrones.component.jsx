@@ -27,15 +27,16 @@ class PopulateDrones extends Component {
   render() {
     var { isLoaded, items } = this.state;
 
+  
     if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
-      return <div className="card-deck mb-3 text-center py-3" > 
+      return<div className="card-deck mb-3 text-center py-3" > 
               {items.map(item => (
-
+                
               <div className="col-md-3 col-lg-3 col-xs-3"  style={ { marginBottom: "25px"} }>
                 <div className="card">
-                  <img src="../images/${item.img}.jpg" className="card-img-top" alt="drone" width="100" height="100"/>
+                  <img src={"../images/" + {...item.src} }className="card-img-top" alt="drone" width="100" height="100"/>
                   <div className="card-body">
                     <h5 className="card-title">{item.name}</h5>
                     <p className="card-text">Eje : {item.axis}</p>

@@ -55,7 +55,7 @@ export default function Cart({ cart, setCart }) {
                       <p className="card-text">Eje : {product.axis}</p>
                       <p className="card-text">Medida : {product.size}</p>
                       <p className="card-text">Color : {product.colour}</p>
-                      <p className="card-text">Precio : {product.price}€</p>
+                      <p className="card-text">Precio : {product.cost}€</p>
                       <input
                     value={product.quantity}
                     onChange={(e) =>

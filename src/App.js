@@ -8,7 +8,7 @@ import Login from "./components/login.component";
 import Register from "./components/register.component";
 import Home from "./components/home.component";
 import BoardUser from "./components/board-user.component";
-import BoardAdmin from "./components/board-admin.component";
+import PopulateWarehouses from "./components/pupulateWarehouses.component";
 import Nav from "./components/nav.component";
 
 import Presentation from "./components/presentation.component";
@@ -30,7 +30,7 @@ class App extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <Route path="/user" component={BoardUser} />
-            <Route path="/admin" component={BoardAdmin} />
+            <Route path="/admin" component={PopulateWarehouses} />
             <Route path="/catalog" component={Presentation} />
 
           </Switch>

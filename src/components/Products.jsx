@@ -19,7 +19,10 @@ export default function Products({ setCart, cart }) {
       image:
         '/images/drone5.jpg',
         axis: 3,
+        size: 50,
+
         colour: 'Blanco',
+
     },
     {
       category: AMATEUR,
@@ -27,18 +30,24 @@ export default function Products({ setCart, cart }) {
       cost: 579,
       image:
         '/images/drone6.jpg',
+        size: 70,
+
         axis: 3,
         colour: 'Negro',
+
 
     },
     {
       category: PROFESIONAL,
       name: 'Autel Robotic ',
       cost: 1389,
+      size: 50,
+
       image:
         '/images/drone7.jpg',
         axis: 4,
         colour: 'Rojo',
+
 
     },
   ]);
@@ -90,7 +99,7 @@ export default function Products({ setCart, cart }) {
               <p className="card-text">Eje : {product.axis}</p>
               <p className="card-text">Medida : {product.size}</p>
               <p className="card-text">Color : {product.colour}</p>
-              <p className="card-text">Precio : {product.price}€</p>
+              <p className="card-text">Precio : {product.cost}€</p>
               <button type="button" className="btn btn-primary" onClick={() => addToCart(product)}>Comprar</button>
             </div>
           </div>
