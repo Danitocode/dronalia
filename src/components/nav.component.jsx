@@ -36,7 +36,7 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { currentUser, showModeratorBoard, showAdminBoard } = this.state;
+    const { currentUser, showAdminBoard } = this.state;
 
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
