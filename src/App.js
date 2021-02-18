@@ -7,17 +7,12 @@ import "./App.css";
 import Login from "./components/login.component";
 import Register from "./components/register.component";
 import Home from "./components/home.component";
-import BoardUser from "./components/board-user.component";
+import BoardUser from "./components/catalog.component";
 import AdminWarehouse from "./components/board-admin.component";
 import Nav from "./components/nav.component";
 
-import Presentation from "./components/presentation.component";
 
 class App extends Component {
-
-
-  
-
   
   render() {
 
@@ -29,9 +24,8 @@ class App extends Component {
             <Route exact path={["/", "/home"]} component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
-            <Route path="/user" component={BoardUser} />
+            <Route path="/catalog" component={BoardUser} />
             <Route path="/admin" component={AdminWarehouse} />
-            <Route path="/catalog" component={Presentation} />
 
           </Switch>
         </div>

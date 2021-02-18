@@ -59,5 +59,7 @@ Slider.defaultProps = {
   images: [
     "../images/drone1.jpg",
     "https://i.picsum.photos/id/859/1900/250.jpg?hmac=-qp63LmIlFnEi-PAzNbLJ6rxB_glW9hP1zzBrHnVvL0",
+    "../images/droneSlider2.jpg",
+
   ],
 };
