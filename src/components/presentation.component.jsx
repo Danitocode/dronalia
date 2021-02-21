@@ -24,10 +24,10 @@ function Presentation() {
     <div className="App">
       <header style={ { marginBottom: "25px"} }>
         <div style={ { marginLeft: "25px"} }>
-        <button onClick={() => navigateTo(PAGE_CART)} type="button" class="btn btn-primary" style={ { marginRight: "25px"} }>
+        <button onClick={() => navigateTo(PAGE_CART)} type="button" className="btn btn-primary" style={ { marginRight: "25px"} }>
           Carrito ({getCartTotal()})
         </button>
-        <button onClick={() => navigateTo(PAGE_PRODUCTS)} type="button" class="btn btn-secondary">
+        <button onClick={() => navigateTo(PAGE_PRODUCTS)} type="button" className="btn btn-secondary">
           Productos disponibles
         </button>
 

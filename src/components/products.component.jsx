@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-const NORTPALMA = 'NORT PALMA';
-const SUDPALMA = 'SUD PALMA';
-const WESTPALMA = 'WEST PALMA';
+const BEGINNER = 'home and garden';
+const AMATEUR = 'utility';
+const PROFESIONAL = 'profesional';
 
 
 
@@ -13,7 +13,7 @@ export default function Products({ setCart, cart }) {
   
   const [products] = useState([
     {
-      category: 'BEGINNER',
+      category: BEGINNER,
       name: 'Dron Parrot Mambo Fly',
       cost: 60,
       image:
@@ -22,11 +22,10 @@ export default function Products({ setCart, cart }) {
         size: 50,
 
         colour: 'Blanco',
-        warehouse: NORTPALMA,
 
     },
     {
-      category: 'AMATEUR',
+      category: AMATEUR,
       name: 'Parrot Anafi Drone ',
       cost: 579,
       image:
@@ -35,27 +34,11 @@ export default function Products({ setCart, cart }) {
 
         axis: 3,
         colour: 'Negro',
-        warehouse:SUDPALMA,
-
-
-    },   
-     {
-      category: 'AMATEUR',
-      name: 'Parrot Anafi Drone ',
-      cost: 579,
-      image:
-        '/images/drone5.jpg',
-        size: 70,
-
-        axis: 3,
-        colour: 'Negro',
-        warehouse:SUDPALMA,
 
 
     },
-
     {
-      category: 'PROFESIONAL',
+      category: PROFESIONAL,
       name: 'Autel Robotic ',
       cost: 1389,
       size: 50,
@@ -64,7 +47,6 @@ export default function Products({ setCart, cart }) {
         '/images/drone7.jpg',
         axis: 4,
         colour: 'Rojo',
-        warehouse: WESTPALMA,
 
 
     },
@@ -87,11 +69,11 @@ export default function Products({ setCart, cart }) {
     setCart(newCart);
   };
 
-  const [warehouse, setWarehouse] = useState(NORTPALMA);
+  const [category, setCategory] = useState(BEGINNER);
 
   const getProductsInCategory = () => {
     return products.filter(
-      (product) => product.warehouse === warehouse
+      (product) => product.category === category
     );
   };
 
@@ -99,10 +81,10 @@ export default function Products({ setCart, cart }) {
     <>
     
       <nav>
-            <div onClick={(e) => setWarehouse(e.target.value)} className="nav nav-tabs" id="nav-tab" role="tablist">
-              <option value={NORTPALMA} className="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Palma Norte</option>
-              <option value={SUDPALMA} className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Palma Sur</option>
-              <option value={WESTPALMA} className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Palma Oeste</option>
+            <div onClick={(e) => setCategory(e.target.value)} className="nav nav-tabs" id="nav-tab" role="tablist">
+              <option value={BEGINNER} className="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Principiantes</option>
+              <option value={AMATEUR} className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Aficionados</option>
+              <option value={PROFESIONAL} className="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profesionales</option>
             </div>
           </nav>
       <div className="products">
@@ -118,6 +100,7 @@ export default function Products({ setCart, cart }) {
               <p className="card-text">Medida : {product.size}</p>
               <p className="card-text">Color : {product.colour}</p>
               <p className="card-text">Precio : {product.cost}€</p>
+              <button type="button" className="btn btn-primary" onClick={() => addToCart(product)}>Comprar</button>
             </div>
           </div>
           </div>              

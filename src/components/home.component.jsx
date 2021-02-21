@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PopulateDrones from "./populateInitialDrones.component";
 import Slider from "./slider.component";
-import { Switch, Route, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 
 class Home extends Component {
   constructor(props) {
@@ -21,7 +21,6 @@ class Home extends Component {
           items: json,
           
         });
-        console.log(json);
 
       });
   }

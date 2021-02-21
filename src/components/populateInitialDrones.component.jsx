@@ -1,6 +1,5 @@
-import { render } from "@testing-library/react";
 import React, { Component } from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class PopulateInitialDrones extends Component {
   constructor(props) {
@@ -20,11 +19,12 @@ class PopulateInitialDrones extends Component {
           items: json,
           
         });
-        console.log(json);
         return json;
       });
   }
 
+
+  
   render() {
     var { isLoaded, items } = this.state;
 

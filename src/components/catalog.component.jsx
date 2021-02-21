@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import PopulateWarehouses from "./populateWarehouses.component";
+
 import UserService from "../services/user.service";
+import Presentation from "./presentation.component";
 
-export default class AdminWarehouse extends Component {
-
+export default class BoardUser extends Component {
   constructor(props) {
     super(props);
 
@@ -13,7 +13,7 @@ export default class AdminWarehouse extends Component {
   }
 
   componentDidMount() {
-    UserService.getAdminBoard().then(
+    UserService.getUserBoard().then(
       response => {
         this.setState({
           content: response.data
@@ -32,13 +32,24 @@ export default class AdminWarehouse extends Component {
     );
   }
 
-
   render() {
-    return (
-        <>
-          {<PopulateWarehouses/>}
-        </>
-    );
+    if(this.state.content === "Error: Unauthorized"){
+      return (
+ 
+        <div className="container">
+          <header className="jumbotron">
+            <h3>{this.state.content}</h3>
+          </header>
+        </div>
+      );
+  
+    }else {
+      return (
+        <div>
+        {<Presentation/>}
+        </div>
+      );
+
+    }
   }
 }
-
