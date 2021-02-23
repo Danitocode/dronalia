@@ -34,11 +34,24 @@ export default class AdminWarehouse extends Component {
 
 
   render() {
-    return (
-        <>
-          {<PopulateWarehouses/>}
-        </>
-    );
+    if(this.state.content === "Error: Unauthorized" | this.state.content === "Forbidden"){
+      return (
+ 
+        <div className="container">
+          <header className="jumbotron">
+            <h3>{this.state.content}</h3>
+          </header>
+        </div>
+      );
+  
+    }else {
+      return (
+        <div>
+        {<PopulateWarehouses/>}
+        </div>
+      );
+
+    }
   }
 }
 
